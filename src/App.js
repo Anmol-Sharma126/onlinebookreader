@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import {useEffect} from 'react';
 import { initGA, logPageView } from './analytics';
 import './App.css';
 
