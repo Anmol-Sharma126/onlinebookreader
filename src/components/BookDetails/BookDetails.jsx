@@ -83,7 +83,7 @@ const BookDetails = () => {
         </div>
         <div className='pdf-viewer'>
           <PDFViewer width="100%" height="500">
-            <Document file="./smaple.pdf">
+          <Document file="E:\reactproject\BookShelf\src\components\BookDetails\smaple.pdf">
               <Page pageNumber={1} />
             </Document>
           </PDFViewer>

@@ -8,9 +8,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const handleNavbar = () => setToggleMenu(!toggleMenu);
-  const { loginWithRedirect,logout } = useAuth0();
-  const { user, isAuthenticated, isLoading } = useAuth0();
-
+  const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
 
   return (
     <nav className='navbar' id="navbar">
@@ -18,47 +16,45 @@ const Navbar = () => {
         <div className='brand-and-toggler flex flex-sb'>
           <Link to="/" className='navbar-brand flex'>
             <img className='logo' src={logoImg} alt="site logo" />
-            <span className='text-uppercase fw-2 fs-24 ls-1'>BookWanderer</span>
+            <span className='text-uppercase fw-2 fs-24 ls-1'>BookRealm</span>
           </Link>
           <button type="button" className='navbar-toggler-btn' onClick={handleNavbar}>
-            <HiOutlineMenuAlt3 size={35} style={{
-              color: `${toggleMenu ? "#fff" : "#010101"}`
-            }} />
+            <HiOutlineMenuAlt3 size={35} style={{ color: `${toggleMenu ? "#fff" : "#010101"}` }} />
           </button>
         </div>
 
         <div className={toggleMenu ? "navbar-collapse show-navbar-collapse" : "navbar-collapse"}>
           <ul className="navbar-nav">
             <li className='navHorItem'>
-              {/* <a href="/BookShelf/src/frontpage/FrontPage.jsx">Home</a> */}
-              <Link to="/" >Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li className='navHorItem'>
               <Link to="shelf">My Shelf</Link>
             </li>
             <li className='navHorItem'>
-              <Link to="about">about</Link>
+              <Link to="about">About</Link>
             </li>
             
-              { 
-              isAuthenticated && (<li className='navHorItem'> <p>{user.name}</p></li> )
-              }
-            {
-              isAuthenticated ?(<li className='navHorItem'> 
-                <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-                  Log Out
-                </button>
-              </li>):
-              (<li className='navHorItem'>
-              <button onClick={() => loginWithRedirect()}>Log In</button>
-            </li>)
-            }
+            { isAuthenticated && (
+              <li className='navHorItem'>
+                <p>{`${user.name.split(' ')[0].charAt(0)}${user.name.split(' ')[1].charAt(0)}`}</p>
+              </li>
+            )}
 
+            { isAuthenticated ? (
+              <li className='navHorItem'> 
+                <button onClick={() => logout({ returnTo: window.location.origin })}>Log Out</button>
+              </li>
+            ) : (
+              <li className='navHorItem'>
+                <button onClick={() => loginWithRedirect()}>Log In</button>
+              </li>
+            )}
           </ul>
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

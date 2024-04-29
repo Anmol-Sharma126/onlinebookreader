@@ -32,7 +32,7 @@ function Footer() {
             </div>
             <div className="contact-container">
                 <h3>Contact Us</h3>
-                <p>123 Street, City, Country</p>
+                <p>Chitkara University Rajpura</p>
                 <p>+1234567890</p>
             </div>
         </div>

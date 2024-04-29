@@ -25,7 +25,7 @@ const About = () => {
             Save Favorites: Save your favorite books to local storage for easy access and future reference.</p>
             
             <p className='fs-22'>Get in Touch</p>
-            <p className='fs-17'>I'd love to hear from you! If you have any questions, suggestions, or feedback about BookWanderer, please don't hesitate to reach out to me at fvyrtyler@gmail.com or connect with me on social media https://www.linkedin.com/in/shashank-saurabh-a42816190/.</p>
+            <p className='fs-17'>I'd love to hear from you! If you have any questions, suggestions, or feedback about BookWanderer, please don't hesitate to reach out to me at anmol126.be22@chitkara.edu.in or connect with me on social media https://www.linkedin.com/in/anmol-sharma-696b03163/.</p>
             <p className='fs-22'>Thank You</p>
             <p className='fs-17'>Thank you for joining me on this literary adventure! I hope you enjoy using BookWanderer as much as I enjoyed creating it.</p>
             
