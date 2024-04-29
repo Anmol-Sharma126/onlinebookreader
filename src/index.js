@@ -12,6 +12,7 @@ import BookList from "./components/BookList/BookList";
 import BookDetails from "./components/BookDetails/BookDetails";
 import Shelf from "./pages/Shelf/Shelf";
 import App from './App';
+import FrontPage from './frontpage/FrontPage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Auth0Provider
@@ -32,7 +33,6 @@ root.render(
         </Route>
       </Routes>
     </BrowserRouter>
-    <App/>
   </AppProvider>
   </Auth0Provider>
 );

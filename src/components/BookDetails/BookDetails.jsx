@@ -5,6 +5,7 @@ import coverImg from "../../images/cover_not_found.jpg";
 import "./BookDetails.css";
 import {FaArrowLeft} from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import { PDFViewer, Document, Page } from '@react-pdf/renderer';
 
 const URL = "https://openlibrary.org/works/";
 
@@ -79,6 +80,13 @@ const BookDetails = () => {
               <span>{book?.subjects}</span>
             </div>
           </div>
+        </div>
+        <div className='pdf-viewer'>
+          <PDFViewer width="100%" height="500">
+            <Document file="./smaple.pdf">
+              <Page pageNumber={1} />
+            </Document>
+          </PDFViewer>
         </div>
       </div>
     </section>

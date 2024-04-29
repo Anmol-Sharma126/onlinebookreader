@@ -30,6 +30,7 @@ const Navbar = () => {
         <div className={toggleMenu ? "navbar-collapse show-navbar-collapse" : "navbar-collapse"}>
           <ul className="navbar-nav">
             <li className='navHorItem'>
+              {/* <a href="/BookShelf/src/frontpage/FrontPage.jsx">Home</a> */}
               <Link to="/" >Home</Link>
             </li>
             <li className='navHorItem'>
@@ -40,7 +41,7 @@ const Navbar = () => {
             </li>
             
               { 
-              isAuthenticated && (<li> <p>{user.name}</p></li> )
+              isAuthenticated && (<li className='navHorItem'> <p>{user.name}</p></li> )
               }
             {
               isAuthenticated ?(<li className='navHorItem'> 
