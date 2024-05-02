@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className='brand-and-toggler flex flex-sb'>
           <Link to="/" className='navbar-brand flex'>
             <img className='logo' src={logoImg} alt="site logo" />
-            <span className='text-uppercase fw-2 fs-24 ls-1'>BookRealm</span>
+            <span className='text-uppercase fw-2 fs-24 ls-1'>BookWanderer</span>
           </Link>
           <button type="button" className='navbar-toggler-btn' onClick={handleNavbar}>
             <HiOutlineMenuAlt3 size={35} style={{ color: `${toggleMenu ? "#fff" : "#010101"}` }} />

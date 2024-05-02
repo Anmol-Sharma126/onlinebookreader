@@ -16,7 +16,7 @@ const About = () => {
           </div>
           <div className='about-text'>
             <h2 className='about-title fs-26 ls-1'>Welcome to BookWanderer</h2>
-            <p className='fs-17'>BookWanderer is a passion project created by Shashank Saurabh with the goal of providing book lovers with an intuitive and enjoyable way to explore and discover new books.</p>
+            <p className='fs-17'>BookWanderer is a passion project created by Our team with the goal of providing book lovers with an intuitive and enjoyable way to explore and discover new books.</p>
             <p className='fs-22'>Our Mission</p>
             <p className='fs-17'>At BookWanderer, our mission is to make the world of literature more accessible and exciting for everyone. Whether you're a seasoned bookworm or just starting your reading journey, we're here to help you find your next great read.</p>
             <p className='fs-22'>What We Offer</p>
